@@ -1,10 +1,10 @@
-GRS: Group Recommendation System using Spectral GCN, Contrastive Learning, and Distillation
+# **GRS: Group Recommendation System using Spectral GCN, Contrastive Learning, and Distillation**
 
 This project implements a Group Recommendation System (GRS) that leverages Spectral Graph Convolutional Networks (GCNs), Contrastive Learning, and Knowledge Distillation to provide item recommendations to clusters of users using the MovieLens dataset. The system is designed to handle both individual and group recommendations by clustering users and extracting group embeddings for improved recommendation accuracy.
 
 ======================================================================
 
-**Project Overview**
+## **Project Overview**
 
 This project simulates a group-based recommendation system through the following components:
 
@@ -16,7 +16,7 @@ This project simulates a group-based recommendation system through the following
 - Evaluation: Assessment of model performance using metrics such as Recall@K and NDCG@K for both individual and group recommendations.
 
 ======================================================================
-**Key Features**
+## **Key Features**
 
 Category           Features
 --------------------------------------------------------
@@ -28,7 +28,7 @@ Knowledge Distillation Embedding compression and reduction
 Evaluation         Recall@K, NDCG@K, Cluster cohesion  
 
 ======================================================================
-**Tools**
+## **Tools**
 
 Category          Technologies
 --------------------------------------------------------
@@ -40,7 +40,7 @@ Visualization     Matplotlib, Seaborn
 Datasets          MovieLens 1M
 
 ======================================================================
-**Installation**
+## **Installation**
 
 Prerequisites:
 
@@ -58,7 +58,7 @@ cd GRS
 
 
 ======================================================================
-**Contributors**
+## **Contributors**
 
 - Mohamed Tarik Rhinaoui  
 
