@@ -18,26 +18,27 @@ This project simulates a group-based recommendation system through the following
 ======================================================================
 ## **Key Features**
 
-Category           Features
---------------------------------------------------------
-Data Processing    Data cleaning, transformation, clustering  
-Graph Construction User-Item and User-User graph generation  
-AI-Powered GCN     Spectral GCN with noise reduction  
-Contrastive Learning Intra-cluster and inter-cluster contrastive loss  
-Knowledge Distillation Embedding compression and reduction  
-Evaluation         Recall@K, NDCG@K, Cluster cohesion  
+| Category             | Features                                        |
+|----------------------|-------------------------------------------------|
+| Data Processing      | Data cleaning, transformation, clustering      |
+| Graph Construction   | User-Item and User-User graph generation       |
+| AI-Powered GCN       | Spectral GCN with noise reduction              |
+| Contrastive Learning | Intra-cluster and inter-cluster contrastive loss |
+| Knowledge Distillation | Embedding compression and reduction         |
+| Evaluation           | Recall@K, NDCG@K, Cluster cohesion             |
+
 
 ======================================================================
 ## **Tools**
 
-Category          Technologies
---------------------------------------------------------
-Data Processing   Pandas, NumPy, Scikit-learn
-Graph Processing  NetworkX, PyTorch Geometric (PyG)
-ML/DL Models      PyTorch, TensorFlow
-Clustering        KMeans, Spectral Clustering
-Visualization     Matplotlib, Seaborn
-Datasets          MovieLens 1M
+| Category         | Technologies                       |
+|------------------|------------------------------------|
+| Data Processing  | Pandas, NumPy, Scikit-learn        |
+| Graph Processing | NetworkX, PyTorch Geometric (PyG)  |
+| ML/DL Models     | PyTorch, TensorFlow                |
+| Clustering       | KMeans, Spectral Clustering        |
+| Visualization    | Matplotlib, Seaborn                |
+| Datasets         | MovieLens 1M                       |
 
 ======================================================================
 ## **Installation**
