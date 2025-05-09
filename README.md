@@ -50,13 +50,14 @@ Prerequisites:
 - PyTorch Geometric  
 - MovieLens Dataset  
 
-Setup:
+## **Setup**
 
-1. Clone the repository:  
+1. **Clone the repository:**
 
+```bash
 git clone https://github.com/TarikRH/GRS.git  
 cd GRS  
-
+```
 
 ======================================================================
 ## **Contributors**
