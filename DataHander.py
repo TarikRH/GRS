@@ -7,6 +7,9 @@ import scipy.sparse as sp
 from scipy.sparse import csr_matrix, coo_matrix, dok_matrix
 from param import args
 import  pickle
+from models.model import GCNModel
+import torch.nn.functional as F
+
 import torch, dgl
 
 class DataHandler:
@@ -61,7 +64,35 @@ class DataHandler:
         )
 
         
+        temp_model = GCNModel(args, self.n_user, self.n_item).to('cpu')
+        ui_graph = self.makeBiAdj(self.dataset['train'].tocsr(), self.n_user, self.n_item)
+
+        # Forward pour récupérer les embeddings
+        with torch.no_grad():
+            emb_u, _ = temp_model(ui_graph, dgl.from_scipy(self.dataset['trust']))  # uu_graph temporaire
+            emb_u = emb_u[:self.n_user]  # Garder uniquement les utilisateurs
+            emb_u = F.normalize(emb_u, p=2, dim=1)
+            cos_sim = torch.matmul(emb_u, emb_u.T)
+
+        # Appliquer un seuil
+        threshold = 0.5
+        src, dst = torch.where(cos_sim > threshold)
+
+        # Enlever les self-loops
+        mask = src != dst
+        src = src[mask]
+        dst = dst[mask]
+
+        # Créer le graphe User-User
         self.uu_graph = dgl.from_scipy(self.dataset['trust'])
+        print("Nombre de nœuds dans uu_graph :", self.uu_graph.num_nodes())
+        print("Nombre d’arêtes dans uu_graph :", self.uu_graph.num_edges())
+
+        # Calcul de la densité (optionnel, utile pour diagnostic)
+        n = self.uu_graph.num_nodes()
+        e = self.uu_graph.num_edges()
+        density = e / (n * (n - 1))
+        print(f"Densité du graphe UU : {density:.6f}")
         uimat = self.dataset['train'].tocsr()
         self.ui_graph = self.makeBiAdj(uimat,self.n_user,self.n_item)
 
