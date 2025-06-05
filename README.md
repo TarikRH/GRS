@@ -1,6 +1,6 @@
 # **GRS: Group Recommendation System using Spectral GCN, Contrastive Learning, and Distillation**
 
-This project implements a Group Recommendation System (GRS) that leverages Spectral Graph Convolutional Networks (GCNs), Contrastive Learning, and Knowledge Distillation to provide item recommendations to clusters of users using the MovieLens dataset. The system is designed to handle both individual and group recommendations by clustering users and extracting group embeddings for improved recommendation accuracy.
+This project implements a Group Recommendation System (GRS) that leverages Spectral Graph Convolutional Networks (GCNs), Contrastive Learning, and Knowledge Distillation to provide item recommendations to clusters of users using the Epinions dataset. The system is designed to handle both individual and group recommendations by clustering users and extracting group embeddings for improved recommendation accuracy.
 
 ======================================================================
 
@@ -9,7 +9,6 @@ This project implements a Group Recommendation System (GRS) that leverages Spect
 This project simulates a group-based recommendation system through the following components:
 
 - Data Preprocessing: Transformation of MovieLens data into User-Item and User-User graphs.  
-- User Clustering: Formation of user clusters based on interaction patterns and social connections.  
 - Spectral GCN Module: Graph-based propagation of user-item and user-user interactions using spectral methods.  
 - Contrastive Learning Module: Reinforces intra-cluster cohesion and inter-cluster separation using contrastive loss.  
 - Distillation Module: Compresses high-dimensional embeddings into compact representations while maintaining structural information.  
@@ -36,9 +35,8 @@ This project simulates a group-based recommendation system through the following
 | Data Processing  | Pandas, NumPy, Scikit-learn        |
 | Graph Processing | NetworkX, PyTorch Geometric (PyG)  |
 | ML/DL Models     | PyTorch, TensorFlow                |
-| Clustering       | KMeans, Spectral Clustering        |
 | Visualization    | Matplotlib, Seaborn                |
-| Datasets         | MovieLens 1M                       |
+| Datasets         | Epinions                           |
 
 ======================================================================
 ## **Installation**
@@ -48,7 +46,7 @@ Prerequisites:
 - Python 3.10+  
 - PyTorch  
 - PyTorch Geometric  
-- MovieLens Dataset  
+- Epinions Dataset  
 
 ## **Setup**
 
